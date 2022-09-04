@@ -1,0 +1,283 @@
+
+.ab{
+        text-decoration: none;
+        color: white;
+        margin-right: 30px;
+       
+
+    
+
+}
+.logo{
+    text-decoration: none;
+        color: white;
+        font-size: 30px;
+        text-transform: uppercase;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+    
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+header ul li a:hover{
+    background: white;
+    color: #151320;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+}
+.Rlds-ring{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: -5px;
+    right: -19px;
+}
+.lds-ring div {
+    left: 45%;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: 8px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.Rlds-ring div{
+    left: 45%;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) ,Rlds-ring div:nth-child(1){
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) ,Rlds-ring div:nth-child(1) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) ,Rlds-ring div:nth-child(1){
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes Rlds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+
+
+
+.toggle_bar {
+    text-align: right;
+    background: rgba(0, 0, 0, 0.1);
+    width: 70px;
+    display: block;
+    height: 30px;
+    position: relative;
+    overflow: hidden;
+    margin: 1em auto;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.toggle_bar .toggle_square {
+    border-radius: 4px;
+    transition: left 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), background 0.2s ease;
+    background: #da4453;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    width: 30px;
+    height: 100%;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.15);
+}
+.toggle_bar .toggle_square:before {
+    content: "×";
+    display: block;
+    color: white;
+    will-change: content;
+    transition: content 0.2s ease;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.contract_toggle input[type=checkbox] {
+    display: none;
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.contract_toggle input[type=checkbox]:checked ~ .toggle_bar .toggle_square {
+    background: #37bc9b;
+    left: 0;
+}
+.contract_toggle input[type=checkbox]:checked ~ .toggle_bar .toggle_square:before {
+    content: "✓";
+}
+
+.sureBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.modal-button {
+    background-color: #111d5e;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    width:150px;
+    height:50px;
+    font-weight: bold;
+    font-size:16px;
+    color:#fff;
+    cursor:pointer;
+    box-shadow: 5px 5px #444;
+}
+
+.modal-button:active {
+    box-shadow: 0px 0px;
+    transform: translateY(5px);
+}button {
+     border:none;
+     outline: none;
+     cursor:pointer;
+     transition: opacity 0.5s;
+ }
+
+button:hover {
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.simple-modal-dialog {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    border:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simple-modal-window {
+    color: white;
+    background-color: #343534;
+    min-width: 320px;
+    min-height:170px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 16px;
+    animation: fadein .5s ease-in-out;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.simple-modal-title {
+    font-weight: bold;
+    background-color: #444;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    color:#fff;
+    text-align: center;
+    padding: 7px 0;
+}
+
+.simple-modal-title-text {
+    margin-left:30px;
+}
+
+.simple-modal-close {
+    float: right;
+    background: none;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 18px;
+    color:#fff;
+    width:30px;
+}
+
+.simple-modal-text {
+    margin-top: auto;
+}
+
+.simple-modal-button-group {
+    margin: auto 0 10px 0;
+}
+
+.simple-modal-button-group button {
+    border-radius: 5px;
+    min-width: 100px;
+    font-weight: bold;
+    color:#fff;
+    padding:7px;
+    margin: 0 10px;
+}
+
+.simple-modal-button-green {
+    background-color: #81b214;
+}
+
+.simple-modal-button-red {
+    background-color: #dd2c00;
+}

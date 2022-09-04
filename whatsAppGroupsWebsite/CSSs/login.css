@@ -1,0 +1,383 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: lavender;
+    background: linear-gradient(-45deg, #000000, #343534, #021116, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    color: #333333;
+}
+
+.login-box ,.buttonBox{
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box h2 ,.buttonBox h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box ,.buttonBox {
+    position: relative;
+
+}
+.infoDisplay{
+    position: relative;
+
+}
+.infoDisplay input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    direction: rtl;
+}
+.infoDisplay label{
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    padding: 10px 0;
+
+    pointer-events: none;
+    transition: .5s;
+    direction: rtl;
+    right: 0px;
+}
+.login-box .user-box input,.buttonBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    direction: rtl;
+}
+.login-box .user-box label ,.buttonBox label{
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    direction: rtl;
+    right: 0px;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label,.buttonBox input:valid ~ label,.buttonBox input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+
+.login-box form .subButton,.login-box form a,.subButtons,#cancelButton {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white ;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 11px;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+}
+
+.agreebutton,.removeButton{
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white ;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 11px;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+}
+
+.agreebutton:hover{
+    background: green;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px green,
+    0 0 5px green,
+    0 0 10px green,
+    0 0 15px green;
+}
+
+
+
+.disagreebutton{
+
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white ;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+}
+
+.disagreebutton:hover{
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px white,
+    0 0 5px red,
+    0 0 10px red,
+    0 0 15px red;
+}
+.login-box .subButton:hover,.login-box a:hover,.removeButton:hover  {
+    background: black;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px white,
+    0 0 5px white,
+    0 0 10px white,
+    0 0 15px white;
+}
+.aButton,.login-box .subButton, .removeButton{
+    padding: 2px 15px 2px 15px;
+    text-decoration: none;
+}
+.removeButton{
+    padding: 2px 28px 5px 15px;
+    text-decoration: none;
+}
+.removeButton:hover{
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 2px white,
+    0 0 5px white,
+    0 0 10px white,
+    0 0 15px white;
+}
+.login-box .subButton span,.login-box .aButton span,.subButtons span {
+    position: absolute;
+    display: block;
+}
+
+.login-box .subButton span:nth-child(1),.login-box .aButton span:nth-child(1),.subButtons span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.login-box .subButton span:nth-child(2),.login-box .aButton span:nth-child(2),.subButtons span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.login-box .subButton span:nth-child(3),.login-box .aButton span:nth-child(3),.subButtons span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.login-box .subButton span:nth-child(4),.login-box .aButton span:nth-child(4),.subButtons span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* 
+
+
+select type of acc
+
+*/
+
+.dropbtn {
+  
+  
+ 
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+    
+    text-align: center;
+   
+  position: relative; left: 0px;
+
+}
+
+.dropdown-content {
+   
+  display: none;
+  position: absolute; left: 70px;
+  text-align: center;
+  min-width: 60px;
+  
+  z-index: 1;
+}
+
+.dropdown-content .aButton{
+    
+ 
+  
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {}
+
+
+.panel__prev-btn  {
+    width: 24px;
+    height: 24px;
+    background: none;
+    padding: 0;
+    position: absolute;
+    box-shadow: none;
+    border: 0;
+
+}
+.panel__prev-btn svg {
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s;
+}
+.panel__prev-btn:hover > svg {
+    fill: white;
+}
+.ab{
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+   
+
+
+
+}
+.logo{
+text-decoration: none;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+header{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 30px;
+
+}
+header ul{
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+}
+header ul li a{
+padding: 6px 15px;
+border-radius: 20px;
+}
+header ul li a:hover{
+background: white;
+color: #151320;
+}
+
